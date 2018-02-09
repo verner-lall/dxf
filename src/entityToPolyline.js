@@ -129,7 +129,8 @@ module.exports = function (entity) {
       }
     }
     if (entity.closed) {
-      polyline.push([polyline[0][0], polyline[0][1]])
+      if (polyline.length>0)
+        polyline.push([polyline[0][0], polyline[0][1]])
     }
   }
 
