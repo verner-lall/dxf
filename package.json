@@ -8,13 +8,13 @@
   },
   "scripts": {
     "lint": "standard",
-    "unit": "mocha --compilers js:babel-register --recursive test/unit/**",
+    "unit": "mocha --compilers js:babel-register --recursive ./test/unit/**",
     "unit:watch": "npm run unit -- --watch",
-    "functional": "rimraf test/functional/output/* && mocha --compilers js:babel-register --recursive test/functional/**",
+    "functional": "rimraf ./test/functional/output/* && mocha --compilers js:babel-register --recursive ./test/functional/**",
     "functional:watch": "npm run unit -- --watch",
     "test": "npm run lint && npm run unit && npm run functional",
-    "compile": "babel --optional runtime -d lib/ src/",
-    "dist": "browserify lib/index.js --standalone dxf -o dist/dxf.js",
+    "compile": "babel --optional runtime -d ./lib/ ./src/",
+    "dist": "browserify ./lib/index.js --standalone dxf -o ./dist/dxf.js",
     "prepare": "npm run compile && npm run dist"
   },
   "repository": {
