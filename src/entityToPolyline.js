@@ -133,19 +133,8 @@ module.exports = function (entity) {
           polyline.push(to)
         }
       }
-<<<<<<< HEAD
     } else {
       logger.warn('Polyline entity with no vertices')
-=======
-    }
-    if (entity.closed) {
-      if (polyline.length) {
-        polyline.push([polyline[0][0], polyline[0][1]])
-      } else {
-        // https://github.com/bjnortier/dxf/issues/20
-        logger.warn('"closed" polyline with ony one vertex')
-      }
->>>>>>> fed065d72ef371395f52efc48a7ff0e66c9297c0
     }
   }
 
